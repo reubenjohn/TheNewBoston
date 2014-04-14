@@ -1,5 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">TheNewBoston</string>
+    <string name="total_display">Your total is</string>
+    <string name="addB">Add 1</string>
+    <string name="subB">Subtract 1</string>
+    <string name="command_input_hint">Enter a command</string>
+    <string name="check_button">Try Command</string>
+    <string name="command_display">invalid</string>
 
 </resources>

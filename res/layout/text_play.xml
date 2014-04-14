@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp" >
+
+    <EditText
+        android:id="@+id/command_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/command_input_hint"
+        android:inputType="textVisiblePassword" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/check_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:text="@string/check_button" />
+
+        <ToggleButton
+            android:id="@+id/password_tb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:checked="true"
+            android:paddingTop="7dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/command_display_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/command_display" />
+
+</LinearLayout>
