@@ -17,7 +17,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/addB"
+        android:text="@string/b_add"
         android:textSize="20sp" />
 
     <Button
@@ -25,7 +25,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/subB"
+        android:text="@string/b_sub"
         android:textSize="20sp" />
 
 </LinearLayout>

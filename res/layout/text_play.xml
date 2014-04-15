@@ -6,11 +6,11 @@
     android:padding="25dp" >
 
     <EditText
-        android:id="@+id/command_input"
+        android:id="@+id/et_command"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/command_input_hint"
-        android:inputType="textVisiblePassword" />
+        android:inputType="textPassword" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -18,14 +18,14 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/check_button"
+            android:id="@+id/b_run_command"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="50"
-            android:text="@string/check_button" />
+            android:text="@string/b_check" />
 
         <ToggleButton
-            android:id="@+id/password_tb"
+            android:id="@+id/tb_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="10"
@@ -34,10 +34,10 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/command_display_tv"
+        android:id="@+id/tv_command_display"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/command_display" />
+        android:text="@string/command_display_default" />
 
 </LinearLayout>

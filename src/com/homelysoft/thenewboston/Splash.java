@@ -20,7 +20,7 @@ public class Splash extends Activity{
 			public void run() {
 				super.run();
 				try{
-					sleep(5000);
+					sleep(4000);
 				}catch(InterruptedException e){
 					e.printStackTrace();
 				}finally{

@@ -3,10 +3,34 @@
 
     <string name="app_name">TheNewBoston</string>
     <string name="total_display">Your total is</string>
-    <string name="addB">Add 1</string>
-    <string name="subB">Subtract 1</string>
+    <string name="b_add">Add 1</string>
+    <string name="b_sub">Subtract 1</string>
     <string name="command_input_hint">Enter a command</string>
-    <string name="check_button">Try Command</string>
-    <string name="command_display">invalid</string>
-
+    <string name="b_check">Try Command</string>
+    <string name="command_display_default">Invalid</string>
+    <string name="label_email">Email address(es)</string>
+    <string name="label_intro">Hateful Intro</string>
+    <string name="label_name">Person\'s name</string>
+    <string name="send_email">Send email</string>
+    <string name="label_has_done">Stupid Things that this Person does</string>
+    <string name="label_to_do">What you want to do to this person:</string>
+    <string name="label_outro">Hateful Outro</string>
+    <string name="b_wallpaper">Set wallpaper</string>
+    <string name="description_photo">Photo picked by the user is displayed here</string>
+    <string name="description_camera">Image button that allows users to take pictures with the camera and then display it</string>
+    <string name="hint_send">Input text to be send to the receive activity</string>
+    <string name="b_start_activity">Start activity</string>
+    <string name="b_start_activity_for_result">Start activity for result</string>
+    <string name="tv_noun_prompt">Reuben is&#8230;</string>
+    <string name="rg_noun_selection_1">Crazy</string>
+    <string name="rg_noun_selection_2">Awsome</string>
+    <string name="rg_noun_selection_3">Both</string>
+    <string name="rg_noun_selection_comment_default">Pick something</string>
+    <string name="rg_noun_selection_comment_1">Probably right</string>
+    <string name="rg_noun_selection_comment_2">Definitely right</string>
+    <string name="rg_noun_selection_comment_3">Spot on</string>
+	<string name="returnData">return</string>
+	<string name="mi_about_us">return</string>
+	<string name="mi_preferences">Preferences</string>
+	
 </resources>

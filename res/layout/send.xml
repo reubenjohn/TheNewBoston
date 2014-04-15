@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/et_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_send" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/b_start_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/b_start_activity"
+        android:layout_below="@id/et_send"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:id="@+id/b_start_activity_for_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/b_start_activity"
+        android:layout_alignTop="@id/b_start_activity"
+        android:text="@string/b_start_activity_for_result" />
+
+    <TextView
+        android:id="@+id/tv_got"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/b_start_activity_for_result"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
