@@ -2,6 +2,8 @@
 <resources>
 
     <string name="app_name">TheNewBoston</string>
+    <string name="activity_name_preferences">Preferences</string>
+    <string name="activity_name_about_us">About us</string>
     <string name="total_display">Your total is</string>
     <string name="b_add">Add 1</string>
     <string name="b_sub">Subtract 1</string>
@@ -29,8 +31,10 @@
     <string name="rg_noun_selection_comment_1">Probably right</string>
     <string name="rg_noun_selection_comment_2">Definitely right</string>
     <string name="rg_noun_selection_comment_3">Spot on</string>
-	<string name="returnData">return</string>
-	<string name="mi_about_us">return</string>
-	<string name="mi_preferences">Preferences</string>
-	
+    <string name="returnData">return</string>
+    <string name="mi_about_us">About us</string>
+    <string name="mi_preferences">Preferences</string>
+    <string name="about_us">"This app was created by Reuben John with the aim of getting an experience of developing an app by following the Android tutorial series on TheNewBoston YouTube channel"</string>
+    <string name="exit">Exit</string>
+
 </resources>

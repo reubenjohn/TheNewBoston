@@ -2,7 +2,9 @@ package com.homelysoft.thenewboston;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
@@ -21,6 +23,16 @@ public class OpenedClass extends Activity implements View.OnClickListener,
 		setContentView(R.layout.receive);
 		bridgeXML();
 		setOnClickListeners();
+		
+		SharedPreferences preferences=PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+		String name=preferences.getString("name", "Reuben");
+		String values=preferences.getString("list", "4");
+		
+		if(values.contentEquals("1"))
+		{
+			question.setText(name+" is...");
+		}
+		
 		/*Bundle recievedBasket=getIntent().getExtras();
 		receivedBread=recievedBasket.getString("myString");
 		question.setText(receivedBread);*/

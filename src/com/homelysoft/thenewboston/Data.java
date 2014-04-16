@@ -28,7 +28,7 @@ public class Data extends Activity implements View.OnClickListener{
 		start=(Button)findViewById(R.id.b_start_activity);
 		startFor=(Button)findViewById(R.id.b_start_activity_for_result);
 		send=(EditText)findViewById(R.id.et_send);
-		receivedAnswer=(TextView)findViewById(R.id.tv_got);
+		receivedAnswer=(TextView)findViewById(R.id.tv_received);
 	}
 	
 	public void setOnclickListeners()

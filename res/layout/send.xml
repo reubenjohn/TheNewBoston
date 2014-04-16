@@ -29,11 +29,11 @@
         android:text="@string/b_start_activity_for_result" />
 
     <TextView
-        android:id="@+id/tv_got"
+        android:id="@+id/tv_received"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/b_start_activity_for_result"
-        android:text="Large Text"
+        android:text="@string/rg_noun_selection_comment_default"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

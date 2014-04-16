@@ -17,6 +17,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:background="@drawable/peacock_selector_light"
         android:text="@string/b_add"
         android:textSize="20sp" />
 
@@ -25,6 +26,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:background="@drawable/peacock_selector_dark"
         android:text="@string/b_sub"
         android:textSize="20sp" />
 
