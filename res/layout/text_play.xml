@@ -9,7 +9,7 @@
         android:id="@+id/et_command"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/command_input_hint"
+        android:hint="@string/hint_command_input"
         android:inputType="textPassword" />
 
     <LinearLayout

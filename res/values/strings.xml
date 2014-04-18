@@ -7,7 +7,7 @@
     <string name="total_display">Your total is</string>
     <string name="b_add">Add 1</string>
     <string name="b_sub">Subtract 1</string>
-    <string name="command_input_hint">Enter a command</string>
+    <string name="hint_command_input">Enter a command</string>
     <string name="b_check">Try Command</string>
     <string name="command_display_default">Invalid</string>
     <string name="label_email">Email address(es)</string>
@@ -36,5 +36,18 @@
     <string name="mi_preferences">Preferences</string>
     <string name="about_us">"This app was created by Reuben John with the aim of getting an experience of developing an app by following the Android tutorial series on TheNewBoston YouTube channel"</string>
     <string name="exit">Exit</string>
+    <string name="dummy">Dummy</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="add_tab">Add a tab</string>
+    <string name="go">Go</string>
+    <string name="browser_backward">Backward</string>
+    <string name="browser_forward">Forward</string>
+    <string name="browser_refresh">Refresh</string>
+    <string name="browser_clear_hostory">Clear_history</string>
+    <string name="hint_set_address">type in a website address</string>
+    <string name="load">Load</string>
+    <string name="save">Save</string>
+    <string name="prefs_status">Go</string>
 
 </resources>

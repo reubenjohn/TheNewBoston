@@ -15,15 +15,9 @@ public class Splash extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.splash);
-		SharedPreferences getPreferences = PreferenceManager
-				.getDefaultSharedPreferences(getBaseContext());
-		boolean play_splash_music_prefered = getPreferences.getBoolean(
-				"cb_splash_music", true);
-		if (play_splash_music_prefered) {
-			splashSound = MediaPlayer.create(Splash.this,
-					R.raw.splash_sound_shortened);
-			splashSound.start();
-		}
+
+		final Intent openStaringPoint = new Intent(
+				"com.homelysoft.thenewboston.HOME");
 		Thread timer = new Thread() {
 			@Override
 			public void run() {
@@ -33,20 +27,36 @@ public class Splash extends Activity {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				} finally {
-					Intent openStaringPoint = new Intent(
-							"com.homelysoft.thenewboston.HOME");
 					startActivity(openStaringPoint);
 				}
 			}
 
 		};
-		timer.start();
+		
+		SharedPreferences getPreferences = PreferenceManager
+				.getDefaultSharedPreferences(getBaseContext());
+		String splash_selection = getPreferences.getString("splash", "1");
+		if (splash_selection.contentEquals("1")) {
+
+			timer.start();
+			splashSound = MediaPlayer.create(Splash.this,
+					R.raw.splash_sound_shortened);
+			splashSound.start();
+
+		} else if (splash_selection.contentEquals("2")) {
+
+			timer.start();
+
+		}
+		else if (splash_selection.contentEquals("3")) {
+			startActivity(openStaringPoint);
+		}
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		if(splashSound!=null)
+		if (splashSound != null)
 			splashSound.release();
 		finish();
 	}
