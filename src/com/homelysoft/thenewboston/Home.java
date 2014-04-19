@@ -14,7 +14,7 @@ import android.widget.ListView;
 public class Home extends ListActivity {
 
 	String classes[] = { "StartingPoint", "Splash", "Home", "TextPlay",
-			"Email", "Photo", "Data", "gfx.GFX", "gfx.GFXSurface", "SoundPoolPlay", "Slider", "Tabs", "Flipper", "SharedPref", "InternalData" };
+			"Email", "Photo", "Data", "gfx.GFX", "gfx.GFXSurface", "SoundPoolPlay", "Slider", "Tabs", "Flipper", "SharedPrefs", "InternalData" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
