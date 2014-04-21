@@ -48,6 +48,8 @@
     <string name="hint_set_address">type in a website address</string>
     <string name="load">Load</string>
     <string name="save">Save</string>
+    <string name="save_as">Save as</string>
+    <string name="confirm">Confirm</string>
     <string name="prefs_status">Go</string>
 
 </resources>

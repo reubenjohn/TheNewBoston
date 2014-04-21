@@ -77,10 +77,10 @@ public class InternalData extends Activity implements OnClickListener {
 		
 		ProgressDialog dialog;
 		
+		@Override
 		protected void onPreExecute() {
 			dialog=new ProgressDialog(InternalData.this);
-			dialog.setProgress(ProgressDialog.STYLE_HORIZONTAL);
-			dialog.setMax(100);
+			dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 			dialog.show();
 		}
 
@@ -88,24 +88,21 @@ public class InternalData extends Activity implements OnClickListener {
 		protected String doInBackground(String... params) {
 			String collected = null;
 			FileInputStream fis = null;
-			
-			for(int i=0;i<20;i++){
-				publishProgress(5);
-				try {
-					Thread.sleep(100);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			}
-			
-			dialog.dismiss();
-			
+						
 			try {
 				fis = openFileInput(fileName);
 				byte[] dataArray = new byte[fis.available()];
+				dialog.setMax(fis.available());
 				while (fis.read(dataArray) != -1) {
+					publishProgress(dataArray.length);
+					try {
+						Thread.sleep(100);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
 				}
 				collected = new String(dataArray);
+				dialog.dismiss();
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
@@ -121,8 +118,9 @@ public class InternalData extends Activity implements OnClickListener {
 			return null;
 		}
 
-		protected void onPregressUpdate(Integer... integers_pregress) {
-			dialog.incrementProgressBy(integers_pregress[0]);
+		@Override
+		protected void onProgressUpdate(Integer... progress) {
+			dialog.incrementProgressBy(progress[0]);
 
 		}
 
