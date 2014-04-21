@@ -1,5 +1,6 @@
 package com.homelysoft.thenewboston;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ public class Tabs extends Activity implements OnClickListener{
 	long strt=0,stp=0;
 	WebView browser;
 	EditText url;
+	@SuppressLint("SetJavaScriptEnabled")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

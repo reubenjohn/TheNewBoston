@@ -51,5 +51,17 @@
     <string name="save_as">Save as</string>
     <string name="confirm">Confirm</string>
     <string name="prefs_status">Go</string>
+    <string name="input_name">Enter a name</string>
+    <string name="sql_update">Update SQLite database</string>
+    <string name="sql_view">View record</string>
+    <string name="sql_names">Names</string>
+    <string name="sql_hotness">Hotness</string>
+    <string name="sql_hotness_scale">Hotness scale (pick value: 1–10)</string>
+    <string name="sql_hotness_picked">You picked 5</string>
+    <string name="sql_info">Get info from DB</string>
+    <string name="hint_sql_id">Enter row ID</string>
+    <string name="sql_get_info">Get information</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
 
 </resources>

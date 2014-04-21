@@ -16,7 +16,7 @@ public class Home extends ListActivity {
 	String classes[] = { "StartingPoint", "Splash", "Home", "TextPlay",
 			"Email", "Photo", "Data", "gfx.GFX", "gfx.GFXSurface",
 			"SoundPoolPlay", "Slider", "Tabs", "Flipper", "SharedPrefs",
-			"InternalData", "ExternalData" };
+			"InternalData", "ExternalData", "SQLite", "Accelerate" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

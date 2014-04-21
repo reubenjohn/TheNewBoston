@@ -8,6 +8,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import android.app.Activity;
+import android.media.MediaScannerConnection;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
@@ -38,14 +40,13 @@ public class ExternalData extends Activity implements OnClickListener,
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.external_data);
 		bridgeXML();
+		setOnClickListeners();
 		checkState();
 		save.setVisibility(View.INVISIBLE);
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(
 				ExternalData.this, android.R.layout.simple_spinner_item, paths);
 		spinner.setAdapter(adapter);
 		spinner.setOnItemSelectedListener(this);
-		Toast.makeText(ExternalData.this, "Confirm pressed", Toast.LENGTH_LONG).show();
-		save.setVisibility(View.VISIBLE);
 	}
 
 	protected void checkState() {
@@ -109,7 +110,8 @@ public class ExternalData extends Activity implements OnClickListener,
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.b_external_data_confirm:
-			Toast.makeText(ExternalData.this, "Confirm pressed", Toast.LENGTH_LONG).show();
+			Toast.makeText(ExternalData.this, "Confirm pressed",
+					Toast.LENGTH_LONG).show();
 			save.setVisibility(View.VISIBLE);
 			break;
 		case R.id.b_external_data_save:
@@ -119,15 +121,41 @@ public class ExternalData extends Activity implements OnClickListener,
 			if (canW == canR == true) {
 				path.mkdirs();
 				try {
-					InputStream is=getResources().openRawResource(R.drawable.b_ball);
-					OutputStream os=new FileOutputStream(file);
-					byte[] data=new byte[is.available()];
+					InputStream is = getResources().openRawResource(
+							R.drawable.b_ball);
+					byte[] data = new byte[is.available()];
 					is.read(data);
+					OutputStream os = new FileOutputStream(file);
 					os.write(data);
 					os.close();
 					is.close();
-					Toast toast=Toast.makeText(ExternalData.this, "File has been Saved", Toast.LENGTH_LONG);
+					//-----------------------------------------------------------------
+					is = getResources().openRawResource(
+							R.raw.action_music);
+					os=new FileOutputStream(new File(path,"action music.mp3"));
+					byte[] musicData=new byte[is.available()];
+					os.write(musicData);
+					os.close();
+					Toast toast = Toast.makeText(ExternalData.this,
+							"File has been Saved. Refreshing media scanner",
+							Toast.LENGTH_LONG);
 					toast.show();
+					MediaScannerConnection
+							.scanFile(
+									ExternalData.this,
+									new String[] { file.toString() },
+									null,
+									new MediaScannerConnection.OnScanCompletedListener() {
+
+										@Override
+										public void onScanCompleted(
+												String path, Uri uri) {
+											Toast.makeText(ExternalData.this,
+													"Scan complete",
+													Toast.LENGTH_SHORT).show();
+
+										}
+									});
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 				} catch (IOException e) {
